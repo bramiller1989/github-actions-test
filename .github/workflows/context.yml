@@ -1,7 +1,16 @@
 on: push
 
 jobs:
-  one:
+  functions:
+    runs-on: ubuntu-16.04
+    steps:
+      - name: dump
+        run: |
+          echo ${{ contains('hello','ll') }}
+          echo ${{ startsWith('hello','he') }}
+          echo ${{ endsWith('hello','lo') }}
+          echo ${{ format('Hello {0} {1} {2}','World', '!', '!') }}
+  print-contexts:
     runs-on: ubuntu-latest
     steps:
       - name: Dump GitHub context
