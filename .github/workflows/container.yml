@@ -12,11 +12,3 @@ jobs:
         run: |
           node -v
           cat /etc/os-release
-  node-non-docker:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Log node version
-        run: |
-          node -v
-          cat /etc/os-release
-  
